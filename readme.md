@@ -24,7 +24,17 @@ Ensure that you have the following tools installed on your system:
    docker compose up -d
    ```
 
-3. Access phpMyAdmin:
+3. Update MySQL Username and Password:
+
+- By default, the MySQL username is root, and the password is also root. If you wish to change these credentials, follow these steps:
+  - Update the following environment variables under the db service:
+  ```
+   environment:
+      MYSQL_ROOT_PASSWORD: your_new_root_password
+      MYSQL_DATABASE: your_new_database_name
+  ```
+
+4. Access phpMyAdmin:
 
    Open your web browser and navigate to http://localhost:8080
 
